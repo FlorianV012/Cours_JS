@@ -1,10 +1,16 @@
 function finSimilaire(str, fin) {
 
+    let strCompare = str.slice(-fin.length);
+
+    if (strCompare === fin) {
+        return "La fin est similaire";
+    } else {
+        return "La fin ne correspond pas";
+    }
 
 }
 
 console.log(finSimilaire("ours", "rs"));
-
 
 
 // ----------------- ÉNONCÉ -----------------
@@ -19,7 +25,7 @@ console.log(finSimilaire("ours", "rs"));
 
 
 // La fonction "slice" permet de découper une chaine de caractère.
-// Essayez cela : 
+// Essayez cela :
 // console.log("hello".slice(2));
 
 // La méthode length permet de donner la longueur d'une chaine.
