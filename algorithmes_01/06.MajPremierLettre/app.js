@@ -1,6 +1,12 @@
 function maj(str) {
 
-  
+    const tableauInit = str.toLowerCase().split(' ');
+
+    const resultat = tableauInit.map(val=>{
+        return val.replace(val.charAt(0), val.charAt(0).toUpperCase())
+    });
+
+    return resultat.join(' ');
 }
 
 console.log(maj("Les sanglots longs des violons de l'automne..."));
@@ -13,7 +19,7 @@ console.log(maj("Les sanglots longs des violons de l'automne..."));
 
 // ----------------- CONSEILS -----------------
 
-// Fonctions utiles : 
+// Fonctions utiles :
 // map(); méthode "callback", qui permet de traiter chaque élément d'un tableau et
 // d'en retourner un nouveau avec les éléments modifiés.
 // toUpperCase(); transforme en majuscule.
