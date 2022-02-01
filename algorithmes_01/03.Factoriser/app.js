@@ -8,6 +8,18 @@ function factoriser(num) {
 
 console.log(factoriser(5));
 
+function factoriserRecursion(num) {
+
+    if (num === 0) {
+        return num = 1;
+    }
+
+    return num * factoriserRecursion(num - 1);
+}
+
+console.log(factoriserRecursion(6));
+
+
 // ----------------- ÉNONCÉ -----------------
 
 // Créez un Algorithme qui va factoriser le nombre qu'on
