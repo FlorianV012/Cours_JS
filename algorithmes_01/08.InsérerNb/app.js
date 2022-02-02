@@ -1,8 +1,28 @@
 function insere(arr, num) {
 
+    arr.push(num);
+    arr.sort();
+    //console.log(arr);
+
+    return arr.indexOf(num)
 }
 
-console.log(insere([30,45,87,96,54,29], 60));
+console.log(insere([30, 45, 87, 96, 54, 29], 60));
+
+// avec une boucle for
+function insere2(arr, num) {
+
+    arr.sort();
+    //console.log(arr);
+
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] >= num) {
+            return i;
+        }
+    }
+}
+
+console.log(insere2([30, 45, 87, 96, 54, 29], 60));
 
 // ----------------- ÉNONCÉ -----------------
 
@@ -11,7 +31,7 @@ console.log(insere([30,45,87,96,54,29], 60));
 // Puis retourner la position du nombre si on l'insère dans ce tableau
 // entre la valeur en dessous et au dessus de ce nombre.
 
-// Par exemple : insere([10,20,30,40],25) -> 2 
+// Par exemple : insere([10,20,30,40],25) -> 2
 // insere([30,45,87,96,54,29], 2000) -> 6, car il sera inseré à la 6eme place.
 
 // ----------------- CONSEILS -----------------
