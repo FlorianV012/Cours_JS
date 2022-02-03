@@ -1,17 +1,25 @@
 function trouverLaPersonne(data, source) {
+  const clesRecherche = Object.keys(source);
 
-
+  return data.filter(obj => {
+    for (i = 0; i < clesRecherche.length; i++) {
+      if (obj.hasOwnProperty(clesRecherche[i]) === false || obj[clesRecherche[i]] !== source[clesRecherche[i]]) {
+        return false;
+      }
+    }
+    return true;
+  })
 }
 
 console.log(
   trouverLaPersonne(
-  [
-    { prenom: "Tom", nom: "Durand" },
-    { prenom: "Juliette", nom: "Garcia" },
-    { prenom: "Jean", nom: "Lafite" },
-    { prenom: "Lucien", nom: "Lafite" },
-    { prenom: "Lucien", abc: "Lafite" }
-  ], 
+    [
+      { prenom: "Tom", nom: "Durand" },
+      { prenom: "Juliette", nom: "Garcia" },
+      { prenom: "Jean", nom: "Lafite" },
+      { prenom: "Lucien", nom: "Lafite" },
+      { prenom: "Lucien", abc: "Lafite" }
+    ],
     { nom: "Lafite" }
   ));
 
