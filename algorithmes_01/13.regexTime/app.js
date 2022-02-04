@@ -1,5 +1,7 @@
 function regexTime(str) {
+    const regex = /[%-/0-9]/gm;
 
+    return str.replace(regex, '');
 }
 
 
