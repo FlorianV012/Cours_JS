@@ -1,9 +1,35 @@
+// Recursion.
 function repete(str, num) {
-
-
-  
+    if (num < 1) {
+        return "";
+    } else {
+        return str + repete(str, num - 1);
+    }
 }
-console.log(repete('abc', 4));
+
+console.log(repete("abc", 4));
+
+
+// opérateur ternaire.
+function repeteTern(str, num) {
+    return num > 0 ? str.repeat(num) : "";
+}
+
+console.log(repeteTern("abc", 4));
+
+
+// While;
+function repeteWhile(str, num) {
+    let str2 = "";
+    while (num > 0) {
+
+        str2 += str
+        num--
+    }
+    return str2;
+}
+
+console.log(repeteWhile("abc", 4));
 
 // ----------------- ÉNONCÉ -----------------
 
@@ -12,13 +38,11 @@ console.log(repete('abc', 4));
 // trouver au moins trois façon différentes de le réaliser.
 // Trouver différentes solutions à un algorithme est un bon moyen de progresser.
 
-
 // ----------------- CONSEILS -----------------
 
 // Recursion.
 // opérateur ternaire.
 // While;
-
 
 // Avec boucle while
 // function repete(str, num) {
@@ -29,11 +53,10 @@ console.log(repete('abc', 4));
 //     final += str;
 //     num--;
 //   }
-  
+
 //   return final;
 // }
 // console.log(repete('abc', 4));
-
 
 // Avec recursion
 // function repete(str, num) {
