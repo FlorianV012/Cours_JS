@@ -1,6 +1,16 @@
 function abreviation(str) {
+    const nom = str.trim().split(' ');
+    console.log(nom[0].charAt(0));
 
+    if(nom.length > 2){
+        nom.slice(0,2)
+    }
 
+    if(nom.length > 1){
+        return(`${nom[0]} ${nom[1].charAt(0)}.`)
+    } else {
+        return nom[0];
+    }
 };
 
 console.log(abreviation("John")); // John D.
