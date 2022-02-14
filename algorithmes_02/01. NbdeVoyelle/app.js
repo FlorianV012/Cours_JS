@@ -1,7 +1,26 @@
+/* function nbDeVoyelles(txt) {
+    const regex = /[aeiouy]/gi
+
+    const voyelles = txt.match(regex);
+
+    if (voyelles) {
+        return voyelles.length;
+    } else {
+        return 0;
+    }
+} */
+
 function nbDeVoyelles(txt) {
+    const voyelles = ['a', 'e', 'i', 'o', 'u', 'y'];
 
+    let nbVoyelles = 0;
 
-    
+    for (let lettre of txt.toLowerCase()) {
+        if (voyelles.includes(lettre)) {
+            nbVoyelles++;
+        }
+    }
+    return nbVoyelles
 }
 
 
