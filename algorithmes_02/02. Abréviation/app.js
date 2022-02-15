@@ -1,6 +1,6 @@
 function abreviation(str) {
     const nom = str.trim().split(' ');
-    console.log(nom[0].charAt(0));
+    // console.log(nom[0].charAt(0));
 
     if(nom.length > 2){
         nom.slice(0,2)

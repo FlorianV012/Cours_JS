@@ -1,6 +1,13 @@
 function anagramme(strA, strB) {
 
+    const regex = /[^a-z]/g
+    function cleanStr(str) {
+        return str.toLowerCase().replace(regex, '').split('').sort().join();
+    }
+    //console.log(cleanStr(strA));
+    //console.log(cleanStr(strB));
 
+    return cleanStr(strA) == cleanStr(strB);
 }
 
 console.log(anagramme("Faible", " fiable")); // True
