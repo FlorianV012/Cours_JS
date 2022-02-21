@@ -1,14 +1,17 @@
-function memeProps(obj, source){
+function memeProps(obj, source) {
+    const clesRecherche = Object.keys(source);
 
+    let test = clesRecherche.every(key => obj.hasOwnProperty(key) && obj[key] === source[key]);
 
+    return test;
 }
 
 
-console.log(memeProps({age: 44, taille: 188}, { age: 44, taille: 188 })); // true 
-console.log(memeProps({age: 44, taille: 188}, { age: 24, taille: 180 })); // false 
-console.log(memeProps({age: 44, taille: 188}, { age: 10, taille: 148 })); // false 
+console.log(memeProps({ age: 44, taille: 188 }, { age: 44, taille: 188 })); // true 
+console.log(memeProps({ age: 44, taille: 188 }, { age: 24, taille: 180 })); // false 
+console.log(memeProps({ age: 44, taille: 188 }, { age: 10, taille: 148 })); // false
 
-
+console.log(memeProps({ age: 10, taille: 148, cheveux: 'brun' }, { age: 10, taille: 148 }));
 
 // -----------------  Énoncé ------------------- //
 
