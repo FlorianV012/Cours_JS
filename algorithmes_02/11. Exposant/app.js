@@ -1,10 +1,13 @@
 function puissance(a, n) {
-
-
+    if (n === 0) {
+        return 1
+    } else {
+        return a * puissance(a, n - 1)
+    }
 };
 
-console.log(puissance(496, 2)); //16
-
+console.log(puissance(4, 2)); //16
+console.log(puissance(2, 10));
 
 // -----------------  Énoncé ------------------- //
 
@@ -15,9 +18,3 @@ console.log(puissance(496, 2)); //16
 
 
 // recursion
-
-
-
-
-
-
