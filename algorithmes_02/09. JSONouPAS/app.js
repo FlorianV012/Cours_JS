@@ -1,8 +1,10 @@
-function JSONtest(obj){
-    
-
-
-
+function JSONtest(obj) {
+    try {
+        JSON.parse(obj);
+        return true;
+    } catch (e) {
+        return false;
+    }
 }
 
 console.log(JSONtest('{"name":"Adam","age":20}'));
