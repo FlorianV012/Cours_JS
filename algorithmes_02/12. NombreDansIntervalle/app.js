@@ -1,7 +1,10 @@
 function intervalle(min, max, nb) {
 
+    // return min < nb && max > nb;
 
-   
+    // return (nb - min) * (nb - max) < 0
+
+    return min < nb == nb < max;
 };
 
 console.log(intervalle(10, 200, 35)); // true
