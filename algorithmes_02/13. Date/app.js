@@ -1,6 +1,7 @@
 function date() {
+    const dateActuelle = new Date();
 
-
+    return dateActuelle.toTimeString().slice(0, 8);
 };
 
 console.log(date()); // 12:00:00 (par ex)
