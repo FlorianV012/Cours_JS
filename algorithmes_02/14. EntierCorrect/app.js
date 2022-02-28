@@ -1,8 +1,13 @@
 const entier = num => {
-    
+    /* if (num < Number.MAX_SAFE_INTEGER && num > Number.MIN_SAFE_INTEGER) {
+        return Math.round(num)
+    } else {
+        return "Entier non sûr"
+    } */
+    return (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER ? "Entier non sûr" : Math.round(num));
 }
-   
-console.log(entier(5,565656)); // 5
+
+console.log(entier(5, 565656)); // 5
 console.log(entier(Math.pow(2, 83))); // Entier non sûr
 
 // -----------------  Énoncé ------------------- //
