@@ -1,6 +1,6 @@
-function premiereLettre(str){
-
-
+function premiereLettre(str) {
+    const regex = /^[A-Z]/g;
+    return regex.test(str);
 }
 
 console.log(premiereLettre("Hello World")); // true
