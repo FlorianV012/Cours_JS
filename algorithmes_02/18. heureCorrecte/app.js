@@ -1,6 +1,7 @@
-function heureCorrecte(str){
+function heureCorrecte(str) {
+    const regex = /^(2[0-3]|[01]?[0-9])(:[0-5][0-9]){2}$/g;
 
-
+    return regex.test(str);
 }
 
 
